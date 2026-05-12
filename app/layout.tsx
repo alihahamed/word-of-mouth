@@ -11,8 +11,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Keiko',
-  description: 'Keiko Landing Page',
+  title: 'Word of Mouth | Social Media Marketing Agency',
+  description: 'Spreading the word about your business one word at a time. Social Media Management, Paid Ads & SEO Copywriting — NYC.',
 };
 
 export default function RootLayout({

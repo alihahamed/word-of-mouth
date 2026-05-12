@@ -51,14 +51,14 @@ export default function MenuOverlay({ isOpen, onClose }: { isOpen: boolean, onCl
   const items = ['ABOUT', 'WORKS', 'REVIEWS'];
 
   return (
-    <div ref={container} className="fixed inset-0 bg-[#e6e4e1] text-black z-50 justify-center px-6 md:px-16 hidden origin-top montserrat-hero">
+    <div ref={container} className="fixed inset-0 bg-[#FDF6EE] text-black z-50 justify-center px-6 md:px-16 hidden origin-top montserrat-hero">
        <header className="absolute top-6 md:top-10 left-6 md:left-10 z-10 uppercase text-xs md:text-sm tracking-widest">
          <div onClick={onClose} className="cursor-pointer group">
           <div className="relative overflow-hidden flex flex-col leading-tight">
             <span className="group-hover:-translate-y-[120%] block transition-transform duration-500 ease-in-out">
               CLOSE
             </span>
-            <span className="absolute left-0 top-0 translate-y-[120%] group-hover:translate-y-0 block transition-transform duration-500 ease-in-out text-[#ff1493]">
+            <span className="absolute left-0 top-0 translate-y-[120%] group-hover:translate-y-0 block transition-transform duration-500 ease-in-out text-[#C8A2D4]">
               CLOSE
             </span>
           </div>
@@ -74,7 +74,7 @@ export default function MenuOverlay({ isOpen, onClose }: { isOpen: boolean, onCl
                    <span className="block group-hover:-translate-y-[120%] transition-transform duration-500 ease-in-out">
                      {item}
                    </span>
-                    <span className="absolute left-0 top-0 w-full text-right block translate-y-[120%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out text-[#ff1493]">
+                    <span className="absolute left-0 top-0 w-full text-right block translate-y-[120%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out text-[#C8A2D4]">
                      {item}
                    </span>
                  </h2>

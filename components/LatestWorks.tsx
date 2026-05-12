@@ -87,7 +87,7 @@ export default function LatestWorks() {
       {/* Header Area */}
       <div className="latest-heading-container absolute left-0 w-full z-20 flex flex-col items-center px-6 mb-10 pointer-events-none">
         <h2 className="latest-heading font-[400] text-5xl md:text-7xl tracking-tighter text-black montserrat-medium text-center">
-       Our<span className='cormorant-font italic text-[#ff1493]'>Latest   </span>   works
+       Our<span className='cormorant-font italic text-[#C8A2D4]'>Latest   </span>   works
         </h2>
       </div>
 
@@ -100,14 +100,14 @@ export default function LatestWorks() {
           {/* Navigation Arrows absolute flanked */}
           <button
             onClick={() => setIndex(index - 1)}
-            className="absolute left-4 md:left-[15%] top-1/2 -translate-y-1/2 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 border border-black/15 hover:bg-[#ff1493]/12 transition-colors pointer-events-auto shadow-lg"
+            className="absolute left-4 md:left-[15%] top-1/2 -translate-y-1/2 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 border border-black/15 hover:bg-[#C8A2D4]/12 transition-colors pointer-events-auto shadow-lg"
           >
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-5 h-5 text-black"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           </button>
 
           <button
             onClick={() => setIndex(index + 1)}
-            className="absolute right-4 md:right-[15%] top-1/2 -translate-y-1/2 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 border border-black/15 hover:bg-[#ff1493]/12 transition-colors pointer-events-auto shadow-lg"
+            className="absolute right-4 md:right-[15%] top-1/2 -translate-y-1/2 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 border border-black/15 hover:bg-[#C8A2D4]/12 transition-colors pointer-events-auto shadow-lg"
           >
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-5 h-5 text-black"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </button>
@@ -159,7 +159,7 @@ export default function LatestWorks() {
                         e.stopPropagation();
                         setIsMuted(!isMuted);
                       }}
-                      className="absolute bottom-4 right-4 z-30 w-10 h-10 flex items-center justify-center rounded-full bg-white/75 backdrop-blur-md border border-[#ff1493]/35 text-[#ff1493] hover:bg-[#ff1493]/18 transition-all duration-300 pointer-events-auto"
+                      className="absolute bottom-4 right-4 z-30 w-10 h-10 flex items-center justify-center rounded-full bg-white/75 backdrop-blur-md border border-[#C8A2D4]/35 text-[#C8A2D4] hover:bg-[#C8A2D4]/18 transition-all duration-300 pointer-events-auto"
                     >
                       {isMuted ? (
                         <svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="w-4 h-4">

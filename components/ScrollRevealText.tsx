@@ -4,21 +4,20 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import Image from 'next/image'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP)
 }
 
 const WORDS = [
-  { text: "KEIKŌ" }, { text: "ISN'T" }, { text: "AN" }, { text: "AGENCY." },
+  { text: "WORD" }, { text: "OF" }, { text: "MOUTH" }, { text: "ISN'T" }, { text: "JUST" }, { text: "AN" }, { text: "AGENCY." },
   { text: "WE'RE" }, { text: "THE" }, { text: "VOICE" }, { text: "YOUR" }, { text: "BRAND" }, { text: "DIDN'T" }, { text: "KNOW" }, { text: "IT" }, { text: "HAD." },
-  { text: "BUILT" }, { text: "IN" }, { text: "CAPE" }, { text: "TOWN." },
-  { text: "OBSESSED" }, { text: "WITH" }, { text: "DETAIL." },
-  { text: "WE" }, { text: "DON'T" }, { text: "JUST" }, { text: "MANAGE" }, { text: "YOUR" }, { text: "SOCIALS" }, { text: "—" },
-  { text: "WE" }, { text: "LIVE" }, { text: "INSIDE" }, { text: "YOUR" }, { text: "BRAND" }, { text: "UNTIL" }, { text: "YOUR" }, { text: "AUDIENCE" }, { text: "CAN'T" }, { text: "TELL" }, { text: "THE" }, { text: "DIFFERENCE" }, { text: "BETWEEN" }, { text: "YOU" }, { text: "AND" }, { text: "US." },
+  { text: "BASED" }, { text: "IN" }, { text: "NYC." },
+  { text: "OBSESSED" }, { text: "WITH" }, { text: "RESULTS." },
+  { text: "WE" }, { text: "DON'T" }, { text: "JUST" }, { text: "POST" }, { text: "FOR" }, { text: "YOU" }, { text: "—" },
+  { text: "WE" }, { text: "BUILD" }, { text: "CONTENT" }, { text: "SYSTEMS" }, { text: "THAT" }, { text: "TURN" }, { text: "FOLLOWERS" }, { text: "INTO" }, { text: "CUSTOMERS" }, { text: "AND" }, { text: "STRANGERS" }, { text: "INTO" }, { text: "FANS." },
   { text: "BOUTIQUE", highlight: true }, { text: "BY", highlight: true }, { text: "CHOICE.", highlight: true },
-  { text: "BECAUSE", highlight: true }, { text: "GREAT", highlight: true }, { text: "WORK", highlight: true }, { text: "DOESN'T", highlight: true }, { text: "SCALE", highlight: true }, { text: "ON", highlight: true }, { text: "AUTOPILOT.", highlight: true }
+  { text: "BECAUSE", highlight: true }, { text: "GREAT", highlight: true }, { text: "MARKETING", highlight: true }, { text: "DOESN'T", highlight: true }, { text: "SCALE", highlight: true }, { text: "ON", highlight: true }, { text: "AUTOPILOT.", highlight: true }
 ];
 
 export default function ScrollRevealText() {
@@ -46,7 +45,7 @@ export default function ScrollRevealText() {
           start: 'center center',
           end: '+=150%',
           pin: true,
-          scrub: 1.5, // Smooth scrubbing
+          scrub: 1.5,
         }
       }
     )
@@ -61,12 +60,9 @@ export default function ScrollRevealText() {
         <h2 className="montserrat-hero text-2xl md:text-4xl lg:text-[3vw]  leading-[1.1] tracking-tight uppercase flex flex-wrap justify-start gap-x-[0.25em] gap-y-[0.1em] items-center">
           {WORDS.map((item, i) => (
             <span key={i} className="flex items-center gap-[0.1em]">
-              <span className={`reveal-element ${item.highlight ? 'text-[#ff1493] ' : 'text-black'}`}>
+              <span className={`reveal-element ${item.highlight ? 'text-[#E8573A] ' : 'text-black'}`}>
                 {item.text}
               </span>
-              {/* {item.icon && (
-                <Image width={64} height={64} src={item.icon} alt="emoji" className="reveal-element ml-[0.1em] w-[0.9em] h-[0.9em] inline-block object-contain" />
-              )} */}
             </span>
           ))}
         </h2>

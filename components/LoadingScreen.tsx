@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const WORDS = ['Scroll', 'Stop', 'Sell'];
+const WORDS = ['Post', 'Engage', 'Grow'];
 const TOTAL_DURATION = 2700; // ms
 
 export default function LoadingScreen({ onComplete }: { onComplete: () => void }) {
@@ -57,26 +57,18 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] bg-[#f8f8f8] flex items-center justify-center font-sans overflow-hidden"
+      className="fixed inset-0 z-[9999] flex items-center justify-center font-sans overflow-hidden"
+      style={{ backgroundColor: '#FDF6EE' }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
     >
-      {/* Portfolio Label */}
-      {/* <motion.div
-        className="absolute top-8 left-8 md:top-12 md:left-12 text-xs md:text-sm text-[#888888] uppercase tracking-[0.3em]"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-      >
-        Portfolio
-      </motion.div> */}
-
       {/* Rotating Words */}
       <div className="absolute inset-0 flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.span
             key={wordIndex}
-            className="text-4xl md:text-6xl lg:text-7xl cormorant-font italic text-black"
+            className="text-4xl md:text-6xl lg:text-7xl cormorant-font italic"
+            style={{ color: '#E8573A' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -89,27 +81,14 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
 
       {/* Counter */}
       <motion.div
-        className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-6xl md:text-8xl lg:text-9xl font-sans text-black tabular-nums tracking-tighter"
+        className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-6xl md:text-8xl lg:text-9xl font-sans tabular-nums tracking-tighter"
+        style={{ color: '#1A1A1A' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         {Math.round(progress).toString().padStart(3, '0')}
       </motion.div>
-
-      {/* Progress Bar */}
-      {/* <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#1f1f1f]/50">
-        <motion.div
-          className="h-full origin-left"
-          style={{
-            background: 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)',
-            boxShadow: '0 0 8px rgba(137, 170, 204, 0.35)',
-          }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: progress / 100 }}
-          transition={{ duration: 0.1, ease: 'linear' }}
-        />
-      </div> */}
     </motion.div>
   );
 }

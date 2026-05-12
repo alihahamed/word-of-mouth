@@ -51,7 +51,7 @@ export default function ClientsMarquee() {
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-14">
         <h2 className="montserrat-medium font-[400] text-center text-[clamp(2rem,5vw,4.4rem)] leading-[0.95] tracking-tighter text-black">
           We Work With the{" "}
-          <span className="cormorant-font italic text-[#ff1493] normal-case">
+          <span className="cormorant-font italic text-[#C8A2D4] normal-case">
             Best
           </span>
         </h2>
