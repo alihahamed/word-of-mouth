@@ -47,7 +47,7 @@ export default function ClientsMarquee() {
   const secondRow = CLIENTS.slice(4);
 
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-white my-14 md:my-20 py-16 md:py-20">
+    <section id="clients" className="relative z-10 w-full overflow-hidden bg-white my-14 md:my-20 py-16 md:py-20">
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-14">
         <h2 className="montserrat-medium font-[400] text-center text-[clamp(2rem,5vw,4.4rem)] leading-[0.95] tracking-tighter text-black">
           We Work With the{" "}

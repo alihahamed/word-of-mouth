@@ -10,7 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Services from "@/components/Services";
 import HowItWorksAccordion from "@/components/HowItWorksAccordion";
-import ScrollRevealText from "@/components/ScrollRevealText";
+import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
 // import LatestWorks from "@/components/LatestWorks";
 import ClientsMarquee from "@/components/ClientsMarquee";
@@ -129,7 +129,10 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="header-item flex items-center gap-3 group cursor-pointer">
+          <div 
+            className="header-item flex items-center gap-3 group cursor-pointer"
+            onClick={() => window.open('https://calendly.com', '_blank')}
+          >
             <div className="relative overflow-hidden flex flex-col text-right leading-tight montserrat-hero">
               <span className="group-hover:-translate-y-[120%] block transition-transform duration-500 ease-in-out">
                 BOOK A
@@ -187,7 +190,7 @@ export default function Home() {
           transition: "opacity 0.5s ease-out",
         }}
       >
-        <ScrollRevealText />
+        <AboutUs />
         <Services />
         {/* <HowItWorksAccordion /> */}
         {/* <LatestWorks /> */}

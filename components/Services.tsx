@@ -246,7 +246,7 @@ export default function Services() {
   )
 
   return (
-    <section ref={container} className="relative w-full z-20">
+    <section id="services" ref={container} className="relative w-full z-20">
       {SERVICES.map((service, index) => (
         <div
           key={index}

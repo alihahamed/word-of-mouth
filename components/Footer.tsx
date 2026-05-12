@@ -69,7 +69,7 @@ export default function Footer() {
   }, { scope: container })
 
   return (
-    <footer ref={container} className="w-full relative flex flex-col min-h-screen overflow-hidden bg-white font-sans text-black" style={{ perspective: '1000px' }}>
+    <footer id="contact" ref={container} className="w-full relative flex flex-col min-h-screen overflow-hidden bg-white font-sans text-black" style={{ perspective: '1000px' }}>
       
       {/* Background Aurora */}
       <div className="footer-aurora absolute inset-0 z-0">
@@ -91,7 +91,10 @@ export default function Footer() {
           Your brand deserves to be talked about.
         </h3>
         
-        <div className="footer-cta-btn flex items-center gap-4 group cursor-pointer mt-6">
+        <div 
+          className="footer-cta-btn flex items-center gap-4 group cursor-pointer mt-6"
+          onClick={() => window.open('https://calendly.com', '_blank')}
+        >
           <div className="relative overflow-hidden flex flex-col text-right leading-tight montserrat-medium text-xl md:text-2xl lg:text-3xl text-black pb-1">
             <span className="group-hover:-translate-y-[120%] block transition-transform duration-500 ease-in-out">
               Book a call

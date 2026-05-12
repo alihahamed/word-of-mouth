@@ -6,7 +6,7 @@
 
 ## Current Phase
 
-- **Phase:** `Rebrand — Keikō → Word of Mouth`
+- **Phase:** `Refinement — Navigation & Links`
 - **Status:** `Complete`
 - **Last Updated:** `2026-05-12`
 
@@ -15,20 +15,17 @@
 ## Last Session Work
 
 ### Summary
-Full rebrand from Keikō to Word of Mouth. Updated color palette (lavender #C8A2D4, coral #E8573A, yellow #FEE12B, cream #FDF6EE), replaced services (Social Media Management, Paid Ads, SEO Copywriting), updated all copy and branding references. Pushed fresh repo to GitHub.
+Made the full-screen menu fully functional by assigning `id` anchors to the rendered components (`AboutUs`, `Services`, `ClientsMarquee`, `Footer`) and implementing a smooth scroll function inside the `MenuOverlay`. Updated the menu items to accurately reflect the page sections (`ABOUT`, `SERVICES`, `CLIENTS`, `CONTACT`). Also wired up both "Book a Call" buttons (in the Header and Footer) to open a dummy Calendly link in a new tab.
 
 ### Files Changed
 | File                        | Change Type | Notes                          |
 |-----------------------------|-------------|--------------------------------|
-| `app/layout.tsx`            | Modified    | Title + description metadata   |
-| `app/page.tsx`              | Modified    | Hero: title, subtitle, colors  |
-| `components/LoadingScreen.tsx` | Modified | Words + background color       |
-| `components/ScrollRevealText.tsx` | Modified | All copy rewritten, accent swap |
-| `components/Services.tsx`   | Modified    | 3 new services + new card colors |
-| `components/LatestWorks.tsx`| Modified    | Accent color swap              |
-| `components/ClientsMarquee.tsx` | Modified | Accent color swap              |
-| `components/MenuOverlay.tsx`| Modified    | Background + accent swap       |
-| `components/Footer.tsx`     | Modified    | Full rebrand + Instagram link  |
+| `components/AboutUs.tsx`    | Modified    | Added id="about"               |
+| `components/Services.tsx`   | Modified    | Added id="services"            |
+| `components/ClientsMarquee.tsx` | Modified| Added id="clients"             |
+| `components/Footer.tsx`     | Modified    | Added id="contact", linked CTA |
+| `components/MenuOverlay.tsx`| Modified    | Rewrote map, added scroll logic|
+| `app/page.tsx`              | Modified    | Linked header Book a Call CTA  |
 
 ---
 
@@ -36,11 +33,8 @@ Full rebrand from Keikō to Word of Mouth. Updated color palette (lavender #C8A2
 
 | # | Decision                          | Rationale                              | Date       |
 |---|-----------------------------------|----------------------------------------|------------|
-| 1 | Lavender #C8A2D4 as primary accent | Extracted from Instagram grid palette  | 2026-05-12 |
-| 2 | Coral #E8573A for highlights      | Matches Instagram post accent color    | 2026-05-12 |
-| 3 | Cream #FDF6EE for backgrounds     | Warm, on-brand feel from Instagram     | 2026-05-12 |
-| 4 | Keep client logos as-is           | User decision — same placeholders      | 2026-05-12 |
-| 5 | Keep video carousel               | User will replace videos manually      | 2026-05-12 |
+| 1 | Scroll delay in menu              | Waits 800ms for exit animation to play | 2026-05-12 |
+| 2 | Calendly dummy link               | Common functional placeholder for DMs  | 2026-05-12 |
 
 ---
 
@@ -48,7 +42,7 @@ Full rebrand from Keikō to Word of Mouth. Updated color palette (lavender #C8A2
 
 | # | Question                                         | Priority | Owner |
 |---|--------------------------------------------------|----------|-------|
-| 1 | Replace placeholder videos with WOM content      | High     | User  |
+| 1 | Do you have a real calendly link to use?         | Low      | User  |
 
 ---
 

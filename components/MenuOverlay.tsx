@@ -48,7 +48,19 @@ export default function MenuOverlay({ isOpen, onClose }: { isOpen: boolean, onCl
     }
   }, [isOpen]);
 
-  const items = ['ABOUT', 'WORKS', 'REVIEWS'];
+  const items = [
+    { name: 'ABOUT', id: 'about' },
+    { name: 'SERVICES', id: 'services' },
+    { name: 'CLIENTS', id: 'clients' },
+    { name: 'CONTACT', id: 'contact' }
+  ];
+
+  const handleScroll = (id: string) => {
+    onClose();
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 800);
+  };
 
   return (
     <div ref={container} className="fixed inset-0 bg-[#FDF6EE] text-black z-50 justify-center px-6 md:px-16 hidden origin-top montserrat-hero">
@@ -66,16 +78,19 @@ export default function MenuOverlay({ isOpen, onClose }: { isOpen: boolean, onCl
        </header>
        <div className="w-full max-w-7xl mx-auto flex flex-col pt-10">
          {items.map((item, i) => (
-           <div key={item} className="relative w-full">
-             <div className="flex justify-between items-start pt-10 pb-4 md:pt-14 md:pb-6">
+           <div key={item.id} className="relative w-full">
+             <div 
+               className="flex justify-between items-start pt-10 pb-4 md:pt-14 md:pb-6 group cursor-pointer"
+               onClick={() => handleScroll(item.id)}
+             >
                <span className="menu-number text-[10px] md:text-xs tracking-widest mt-4 opacity-0 text-black/50">0{i + 1}</span>
-               <div className="overflow-hidden group cursor-pointer">
+               <div className="overflow-hidden">
                  <h2 className="menu-text-inner relative flex flex-col text-6xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tight uppercase font-[400] translate-y-[120%]">
                    <span className="block group-hover:-translate-y-[120%] transition-transform duration-500 ease-in-out">
-                     {item}
+                     {item.name}
                    </span>
                     <span className="absolute left-0 top-0 w-full text-right block translate-y-[120%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out text-[#C8A2D4]">
-                     {item}
+                     {item.name}
                    </span>
                  </h2>
                </div>
